@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Student Info -->
+        <TextView android:text="Name: Anika"/>
+        <TextView android:text="ID: 12345"/>
+        <TextView android:text="Semester: Spring"/>
+        <TextView android:text="Dept: CSE"/>
+
+        <!-- Table -->
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:stretchColumns="*"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Header -->
+            <TableRow android:background="#CCCCCC">
+                <TextView android:text="Subject" android:textStyle="bold"/>
+                <TextView android:text="Obtained" android:textStyle="bold"/>
+                <TextView android:text="Total" android:textStyle="bold"/>
+                <TextView android:text="Grade" android:textStyle="bold"/>
+            </TableRow>
+
+        </TableLayout>
+
+        <!-- Summary -->
+        <TextView
+            android:id="@+id/summaryText"
+            android:text="Summary"
+            android:textSize="16sp"/>
+
+        <!-- GPA -->
+        <TextView
+            android:id="@+id/gpaText"
+            android:text="GPA: 0.0"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <!-- Input -->
+        <EditText
+            android:id="@+id/subName"
+            android:hint="Subject Name"/>
+
+        <EditText
+            android:id="@+id/obtMarks"
+            android:hint="Obtained Marks"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/totalMarks"
+            android:hint="Total Marks"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/addBtn"
+            android:text="Add Subject"/>
+
+        <Button
+            android:text="Print / Share"/>
+
+    </LinearLayout>
+
+</ScrollView>
