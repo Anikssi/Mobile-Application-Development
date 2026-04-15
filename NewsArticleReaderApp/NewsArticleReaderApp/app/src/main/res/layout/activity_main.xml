@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#6200EE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="The Daily Reader"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:id="@+id/bookmarkBtn"
+            android:src="@android:drawable/btn_star_big_off"
+            android:background="@null"/>
+
+        <ImageButton
+            android:id="@+id/shareBtn"
+            android:src="@android:drawable/ic_menu_share"
+            android:background="@null"/>
+    </LinearLayout>
+
+    <!-- Scroll Content -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Header Image -->
+            <ImageView
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+            <!-- Category -->
+            <TextView
+                android:text="TECHNOLOGY"
+                android:background="#FF9800"
+                android:textColor="#fff"
+                android:padding="5dp"/>
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/title"
+                android:text="Future of AI"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <!-- Author Row -->
+            <LinearLayout
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/ic_launcher"/>
+
+                <TextView android:text="John Doe"/>
+                <TextView android:text=" | April 2026"/>
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_height="1dp"
+                android:background="#000"/>
+
+            <!-- Quick Nav -->
+            <HorizontalScrollView>
+                <LinearLayout>
+
+                    <Button android:id="@+id/btnIntro" android:text="Intro"/>
+                    <Button android:id="@+id/btnKey" android:text="Key"/>
+                    <Button android:id="@+id/btnAnalysis" android:text="Analysis"/>
+                    <Button android:id="@+id/btnConclusion" android:text="Conclusion"/>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Sections -->
+            <TextView android:id="@+id/intro" android:text="Introduction" android:textStyle="bold"/>
+            <TextView android:text="Long intro text here (150+ words)..." />
+
+            <TextView android:id="@+id/key" android:text="Key Points" android:textStyle="bold"/>
+            <TextView android:text="Long key points text..." />
+
+            <TextView android:id="@+id/analysis" android:text="Analysis" android:textStyle="bold"/>
+            <TextView android:text="Long analysis text..." />
+
+            <TextView android:id="@+id/conclusion" android:text="Conclusion" android:textStyle="bold"/>
+            <TextView android:text="Long conclusion text..." />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Back to Top -->
+    <Button
+        android:id="@+id/topBtn"
+        android:text="↑"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"/>
+
+</RelativeLayout>
