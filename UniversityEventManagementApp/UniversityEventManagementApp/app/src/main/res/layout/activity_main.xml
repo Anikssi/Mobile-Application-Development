@@ -1,0 +1,57 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/profileImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/welcomeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome, Student!"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="12dp"
+        app:layout_constraintTop_toTopOf="@+id/profileImg"
+        app:layout_constraintBottom_toBottomOf="@+id/profileImg"
+        app:layout_constraintStart_toEndOf="@+id/profileImg" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button android:id="@+id/btnBrowse" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Browse Events" app:layout_constraintEnd_toStartOf="@+id/guide_v" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@+id/guide_h" />
+    <Button android:id="@+id/btnBookings" android:layout_width="0dp" android:layout_height="wrap_content" android:text="My Bookings" app:layout_constraintStart_toEndOf="@+id/guide_v" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@+id/guide_h" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="match_parent" android:layout_height="150dp" android:scaleType="centerCrop" android:src="@drawable/ic_launcher_background" />
+            <TextView android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Featured: Tech Fest 2026" android:textStyle="bold" />
+            <Button android:id="@+id/btnRegisterFeatured" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Register Now" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
