@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/xml/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f0f0f0"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <Button android:id="@+id/btnBack" android:layout_width="50dp" android:layout_height="wrap_content" android:text="◀" />
+        <Button android:id="@+id/btnForward" android:layout_width="50dp" android:layout_height="wrap_content" android:text="▶" />
+        <Button android:id="@+id/btnRefresh" android:layout_width="50dp" android:layout_height="wrap_content" android:text="🔄" />
+        <Button android:id="@+id/btnHome" android:layout_width="50dp" android:layout_height="wrap_content" android:text="🏠" />
+
+        <EditText
+            android:id="@+id/etAddressBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter URL"
+            android:imeOptions="actionGo"
+            android:inputType="textUri"
+            android:singleLine="true" />
+
+        <Button android:id="@+id/btnGo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GO" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:visibility="gone" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <Button android:id="@+id/btnGoogle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Google" />
+            <Button android:id="@+id/btnYoutube" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="YouTube" />
+            <Button android:id="@+id/btnWiki" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wikipedia" />
+            <Button android:id="@+id/btnKhan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Khan Academy" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
